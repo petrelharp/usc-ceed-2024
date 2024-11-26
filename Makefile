@@ -3,9 +3,15 @@ SHELL := /bin/bash
 
 .PHONY : setup
 
-usc-ceed-2024.slides.html : setup
+TARGET := usc-ceed-2024.slides.html
+
+$(TARGET) : setup
 
 setup :
 	$(MAKE) -C figs
+
+publish : $(TARGET)
+	# do this after giving the talk
+	sed -i '/mathjax: .*MathJax.js/d' $<
 
 include rules.mk

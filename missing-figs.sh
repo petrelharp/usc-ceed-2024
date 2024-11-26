@@ -12,11 +12,12 @@ fi
 
 FILE="$1"
 # the first directories have priority
-SOURCEDIRS="/home/peter/teaching/talks/cirm-2021 /home/peter/teaching/talks/corvallis-jan-2024 /home/peter/teaching/talks/ie2-jan-2023 /home/peter/teaching/talks/cornell-sep-2023 /home/peter/teaching/talks/umich-feb-2022 /home/peter/teaching/talks/osu-may-2021 /home/peter/teaching/talks/nw_prob_2019 /home/peter/teaching/talks/ist-oct-2020 /home/peter/teaching/talks/reed-aug-2020 /home/peter/teaching/talks/uo-oct-2019 /home/peter/teaching/talks/france-may-2019 /home/peter/teaching/talks/idaho-march-2019"
+SOURCEDIRS="/home/peter/teaching/talks/corvallis-feb-2024 /home/peter/teaching/talks/corvallis-jan-2024 /home/peter/teaching/talks/ie2-jan-2023 /home/peter/teaching/talks/cornell-sep-2023 /home/peter/teaching/talks/umich-feb-2022 /home/peter/teaching/talks/osu-may-2021 /home/peter/teaching/talks/cirm-2021 /home/peter/teaching/talks/nw_prob_2019 /home/peter/teaching/talks/ist-oct-2020 /home/peter/teaching/talks/reed-aug-2020 /home/peter/teaching/talks/uo-oct-2019 /home/peter/teaching/talks/france-may-2019 /home/peter/teaching/talks/idaho-march-2019"
 
 FIGS="$(grep "\!\[" $FILE  | sed -e 's/^.*!\[[^]]*\](\([^)]*\)).*/\1/')"
 FIGS="$FIGS $(grep "src=" $FILE  | sed -e 's/.*src="//' | sed -e 's/".*//')"
-FIGS="$FIGS $(grep "data-background-image" $FILE | sed -e "s/.*data-background-image=[\"']\([^\"']*\)['\"].*/\1/")"
+FIGS="$FIGS $(grep "data-background-image=" $FILE | sed -e "s/.*data-background-image=[\"']\([^\"']*\)['\"].*/\1/")"
+FIGS="$FIGS $(grep "data-background-image:" $FILE | sed -e "s/.*data-background-image:[\"' ]*\([^ ]*\)[\"' ]*$/\1/")"
 MISSING=""
 
 for x in $FIGS
