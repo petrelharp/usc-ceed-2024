@@ -6,6 +6,20 @@ date: "Quantitative and Computational Biology Seminar<br/> University of Souther
 
 <!--
 Abstract:
+Modern datasets have made it possible to use genomic data to try to answer
+increasingly detailed and practically relevant questions about evolution and
+ecology. Although in many applications analytical inference methods are
+infeasible or not available, simulation-based inference is possible for any
+system that can be simulated. In this talk I will describe recent progress in
+simulating large, evolving populations, and storing and analyzing the entire
+genomic history of these simulations (using SLiM and the "tree sequence" data
+structure). I will then give three examples of applications: understanding how
+the balance of different types of natural selection, mutation rate variation,
+and other processes produced the landscapes of genetic diversity in the great
+apes; describing conditions under which coevolution can produce spatial
+correlations in phenotypes such as seen in the classic Taricha newt-Thamnophis
+garter snake system; and training a deep learning model to predict maps of
+population density.
 -->
 
 # Outline
