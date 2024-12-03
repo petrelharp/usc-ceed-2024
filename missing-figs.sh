@@ -16,8 +16,7 @@ SOURCEDIRS="/home/peter/teaching/talks/corvallis-feb-2024 /home/peter/teaching/t
 
 FIGS="$(grep "\!\[" $FILE  | sed -e 's/^.*!\[[^]]*\](\([^)]*\)).*/\1/')"
 FIGS="$FIGS $(grep "src=" $FILE  | sed -e 's/.*src="//' | sed -e 's/".*//')"
-FIGS="$FIGS $(grep "data-background-image=" $FILE | sed -e "s/.*data-background-image=[\"']\([^\"']*\)['\"].*/\1/")"
-FIGS="$FIGS $(grep "data-background-image:" $FILE | sed -e "s/.*data-background-image:[\"' ]*\([^ ]*\)[\"' ]*$/\1/")"
+FIGS="$FIGS $(grep "data-background-image" $FILE | sed -e "s/.*data-background-image[=:][\"' ]*\([^\"']*\)['\"]*.*/\1/")"
 MISSING=""
 
 for x in $FIGS

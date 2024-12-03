@@ -1,8 +1,16 @@
 ---
 title: "Simulation-based inference for ecology and evolution"
 author: "Peter Ralph <br/> University of Oregon <br/> Dept of Data Science"
-date: "Quantitative and Computational Biology Seminar<br/> University of Southern California // 5 December 2024"
+date: "Quantitative and Computational Biology Seminar<br/> University of Southern California // 4 December 2024"
 ---
+
+--------------------
+
+<!--
+title-slide-attributes:
+    data-background-image: /path/to/title_image.png
+    data-background-size: contain
+-->
 
 <!--
 Abstract:
@@ -22,24 +30,15 @@ garter snake system; and training a deep learning model to predict maps of
 population density.
 -->
 
-# Outline
-
-<!--
-title-slide-attributes:
-    data-background-image: /path/to/title_image.png
-    data-background-size: contain
--->
-
-
---------------------
-
-> Both the UO and OSU are located on the traditional indigenous homeland of the Kalapuya people.
+> UO is located on the traditional indigenous homeland of the Kalapuya people.
 Kalapuya people were dispossessed of their indigenous homeland by the United States government and forcibly removed.
 Today, Kalapuya descendants are primarily citizens of the Confederated Tribes of Grand Ronde and the Confederated Tribes of Siletz Indians,
 and continue to make important contributions to their communities, to the UO, to Oregon, and to the world.
 
+. . .
 
-# Outline
+USC: on unceded Tongva land
+
 
 ## Outline of the talk
 
@@ -55,10 +54,13 @@ and continue to make important contributions to their communities, to the UO, to
 :::: {.columns}
 :::::::: {.column width=60%}
 
-1. How much natural selection is needed to explain the correlations in genetic diversity
+1. What models are consistent with the observed spatial patterns
+    of coevoluation between *Taricha* newts and *Thamnophis* snakes?
+
+2. How much natural selection is needed to explain the correlations in genetic diversity
     along the genomes of the great apes?
 
-2. How can we predict the landscape of population density
+3. How can we predict the landscape of population density
     using spatial genomic data?
 
 :::: 
@@ -367,6 +369,10 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 
 ## The main idea
 
+Genomes are *big*.
+
+. . .
+
 If we *record the tree sequence*
 that relates everyone to everyone else,
 
@@ -665,7 +671,7 @@ Victoria Caudill
 - Chromosome-scale simulation (chr12)
 - selection on annotated exons (from Ensembl via [stdpopsim](https://popsim-consortium.github.io/stdpopsim-docs/main/catalog.html#sec_catalog_HomSap_annotations))
 - deCode genetic map
-- branches simulated independently with SLiM and merged [tskit](https://tskit.dev/pyslim/docs/latest/vignette_parallel_phylo.html)
+- branches simulated independently with SLiM and merged with [tskit](https://tskit.dev/pyslim/docs/latest/vignette_parallel_phylo.html)
 - runtime: hours to weeks
 - total simulations: 56
 
@@ -778,18 +784,22 @@ $$ \vphantom{ d_{xy} = \pi_\text{anc} \nearrow + \mu T_\text{MRCA} \searrow } $$
 
 # Maps of population density
 
-software: `mapNN`
 
+::: centered
+[![](figs/mapNN/paper.png){width=70%}](https://doi.org/10.1111/1755-0998.14005)
+:::
 
 ::: {.caption .floatright}
-![](figs/andy_22.jpg){width=20%}
-![](figs/mapNN/chris.jpeg){width=30%}
+![](figs/mapNN/chris.jpeg){width=23%}
+![](figs/gilia.jpeg){width=20%}
+![](figs/andy_22.jpg){width=15%}
 
 
 with
-[Andy Kern](https://kr-colab.github.io)
-&
 [Chris C R Smith](https://scholar.google.com/citations?user=ZHHGVn8AAAAJ&hl=en)
+Gilia Patterson
+&
+[Andy Kern](https://kr-colab.github.io),
 :::
 
 ## Goal
@@ -832,7 +842,6 @@ and dispersal distance ($\sigma$):
 ![](figs/mapNN/methods_comparison.png)
 
 
-... stay tuned for a preprint!
 
 
 
