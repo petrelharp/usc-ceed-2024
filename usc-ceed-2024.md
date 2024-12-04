@@ -37,13 +37,15 @@ and continue to make important contributions to their communities, to the UO, to
 
 . . .
 
+::: centered
 USC: on unceded Tongva land
+:::
 
 
 ## Outline of the talk
 
 1. Genomes, and simulations
-2. The tree sequence
+2. The tree sequence (but, mostly tomorrow)
 3. Applications
 
 
@@ -55,7 +57,7 @@ USC: on unceded Tongva land
 :::::::: {.column width=60%}
 
 1. What models are consistent with the observed spatial patterns
-    of coevoluation between *Taricha* newts and *Thamnophis* snakes?
+    of coevolution between *Taricha* newts and *Thamnophis* snakes?
 
 2. How much natural selection is needed to explain the correlations in genetic diversity
     along the genomes of the great apes?
@@ -260,7 +262,7 @@ an individual-based, scriptable forwards simulator
 - <s>nucleotide models</s>
 - <s>context-dependence</s>*
 - mobile elements*
-- inversions*
+- <s>inversions</s>
 - copy number variation
 
 :::
@@ -290,9 +292,9 @@ an individual-based, scriptable forwards simulator
 - You have two copies of each chromosome, 
   one from each parent.
 
-- When you make a gamete, the copies *recombine*, at Poisson($\rho$) locations.
+- When you make a gamete, the copies *recombine*.
 
-- *Mutations* appear at Poisson($\mu$) locations.
+- *Mutations* appear.
 
 :::
 ::::::
@@ -328,13 +330,13 @@ is a way to succinctly describe this, er, sequence of trees
 ::: {.columns}
 :::::: {.column width=50%}
 
-![tskit logo](figs/tskit_logo.png){width=80%}
+![tskit logo](figs/tskit_logo.png){width=100%}
 
 :::
 :::::: {.column width=50%}
 
 ::: {.floatright}
-![jerome kelleher](figs/jerome.jpeg){width=50%}
+![jerome kelleher](figs/jerome.jpeg){width=80%}
 
 :::: {.caption}
 jerome kelleher
@@ -369,7 +371,7 @@ using msprime [Kelleher et al., 2016], and the sizes of the resulting files plot
 
 ## The main idea
 
-Genomes are *big*.
+Genomes are *big*. But a lot of the variants are neutral.
 
 . . .
 
@@ -477,6 +479,10 @@ and Haller, Galloway, Kelleher, Messer, and R. 2018,
 ![Victoria Caudill](figs/victoria.jpg){width=80%}
 
 Victoria Caudill
+
+::: {.caption .greyed}
+Paper: ahead of print in *American Naturalist*
+:::
 
 :::
 ::::
@@ -816,12 +822,23 @@ and dispersal distance ($\sigma$):
 
 ## Training
 
+::: columns
+:::::: {.column width=60%}
+
 - randomly generated landscapes of $K$ and $\sigma$,
     * passed to spatial SLiMulations
     * and used as the target
 
 - data: $\sim 100$ sampled $10^8$bp genomes 
 - 450 random sample pairs
+
+::::::
+:::::: {.column width=40%}
+
+![](figs/computer.png){width=80%}
+
+::::::
+:::
 
 ## Results
 
@@ -841,6 +858,14 @@ and dispersal distance ($\sigma$):
 
 ![](figs/mapNN/methods_comparison.png)
 
+## Where next?
+
+Most of the *power* and *robustness*
+comes from a good ensemble of simulations.
+
+. . .
+
+We need more examples!
 
 
 
@@ -884,21 +909,23 @@ and dispersal distance ($\sigma$):
 ## Thanks!
 
 :::: {.columns}
-:::::::: {.column width=50%}
+:::::::: {.column width=40%}
 
-
+<div style="font-size: 85%;">
 - Andy Kern
+- Nate Pope
 - Victoria Caudill
 - Murillo Rodrigues 
 - Gilia Patterson
 - Chris Smith
-- Nate Pope
+- Thomas Forest
 - Jiseon Min
 - Clara Rehmann
-- Bruce Edelman
 - Anastasia Teterina
-- Matt Lukac
+- Angel Rivera-Colon
 <!--
+- Bruce Edelman
+- Matt Lukac
 - Saurabh Belsare
 - Gabby Coffing
 - Jeff Adrion
@@ -912,16 +939,27 @@ Funding:
 - NIH NIGMS
 - NSF DBI
 
-::::
-:::::::: {.column width=50%}
+</div>
 
-<div style="font-size: 85%; margin-top: -40px;">
+<img src="figs/KernRalph_5x5.png" alt="KR-colab logo" style="width: 50%; margin: 0px;"/>
+
+::::
+:::::::: {.column width=60%}
+
+:::::::::: {.columns}
+::::::::::::: {.column width=30%}
+
+<div style="font-size: 85%;">
 
 
 - Jerome Kelleher
 - Ben Haller
-- Ben Jeffery
 - Yan Wong
+- Ben Jeffery
+- Sam Tallman
+- Duncan Mbuli-Robertson
+- Hanbin Lee
+- Gregor Gorjanc
 - Elsie Chevy
 - Madeline Chase
 - Sean Stankowski
@@ -939,12 +977,20 @@ Funding:
 
 </div>
 
-::: {.floatright}
-![](figs/KernRalph_5x5.png){width=20%}
-![tskit logo](figs/tskit_logo.png){width=30%}
-![SLiM logo](figs/slim_logo.png){width=30%}
-![](figs/colab.png){width=70%}
-:::
+:::::::::::::
+::::::::::::: {.column width=30%}
+
+<div class=centered style="margin-top: -60px;">
+<img src="figs/tskit_logo.png" alt="tskit logo" style="width: 60%; margin: 10px;"/>
+<img src="figs/slim_logo.png" alt="SLiM logo" style="width: 90%; margin: 10px;"/>
+</div>
+
+:::::::::::::
+::::::::::
+
+<div style="margin-top: -30px;">
+![](figs/colab.png){width=80%}
+</div>
 
 ::::
 ::::::::
@@ -952,321 +998,3 @@ Funding:
 
 
 ## {data-background-image="figs/guillemots_thanks.png" data-background-position=center data-background-size=50%}
-
-<!-- Nebria -->
-
-# Beetles in the mountains
-
-## *Nebria ingens/riversi*
-
-::: {.columns}
-:::::: {.column width=40%}
-
-- ground beetles
-- live on flowing snowmelt in the Sierra Nevada of California
-- cannot fly
-- live 1--2 years
-
-:::
-:::::: {.column width=60%}
-
-::: {.floatright}
-![](figs/nebria/nebria_overview.png){width=100%}
-:::
-
-:::
-::::::
-
-
-------------------
-
-
-::: {.columns}
-:::::: {.column width=40%}
-
-::: {.centered}
-![Nebria habitat in the LGM](figs/nebria/LGM.png){width=100%}
-:::
-
-:::
-:::::: {.column width=60%}
-
-Good habitat followed the glaciers uphill
-(SDM by Yi-Ming Weng).
-
-::: {.floatright}
-![SDM](figs/nebria/sdm.png){width=100%}
-:::
-
-:::
-::::::
-
-
-## Goals
-
-- What was the spatial demographic history of *Nebria* since the LGM?
-- Where did the ancestors of today's beetles live in the past?
-- Were the ancestors of *N. ingens* and *N. riversi* distinct at the LGM?
-
-::: {.centered}
-![SDM](figs/nebria/sdm.png){width=100%}
-:::
-
-## Data
-
-::: {.columns}
-:::::: {.column width=40%}
-
-Collected by Yi-Ming Weng and Sean Schoville:
-
-- 384 beetles at 27 sites
-- low coverage WGS
-- some presence/absence data
-- expert knowledge about good locations
-- a species distribution model
-
-:::
-:::::: {.column width=60%}
-
-::: {.floatright}
-![](figs/nebria/nebria_sampling.png){width=100%}
-:::
-
-:::
-::::::
-
-![](figs/nebria/big_sdm.png){width=100%}
-
-
-## Methods overview
-
-::: {.columns}
-:::::: {.column width=40%}
-
-1. Develop an individual-based SLiMulation.
-
-:::
-:::::: {.column width=60%}
-
-::: {.floatright}
-SLiM screenshot
-:::
-
-:::
-::::::
-
-## Methods overview
-
-::: {.columns}
-:::::: {.column width=40%}
-
-1. Develop an individual-based SLiMulation.
-2. Use presence-absence estimates to narrow the range of parameter values
-    based on 200 years of simulation.
-
-:::
-:::::: {.column width=60%}
-
-::: {.floatright}
-SLiM screenshot
-:::
-
-:::
-::::::
-
-
-
-## Methods overview
-
-::: {.columns}
-:::::: {.column width=40%}
-
-1. Develop an spatial, individual-based SLiMulation.
-2. Do ABC on presence-absence estimates to narrow the range of parameter values
-    based on 200 years of simulation.
-3. Run simulations since LGM, and do ABC on mean heterozygosity and divergence.
-
-:::
-:::::: {.column width=60%}
-
-::: {.floatright}
-SLiM screenshot
-:::
-
-:::
-::::::
-
-## Simulations {data-background-image="figs/nebria/sims1.png" data-background-position="bottom 100px right" data-background-size=100%}
-
-## Simulations {data-background-image="figs/nebria/sims2.png" data-background-position="bottom 100px right" data-background-size=100%}
-
-## Simulations {data-background-image="figs/nebria/sims3.png" data-background-position="bottom 100px right" data-background-size=100%}
-
-
-# More on landscapes of diversity
-
-----------------
-
-::: {.centered}
-![](figs/murillo/far_divergence_tree.png){width=80%}
-:::
-
-## A quick primer {data-background-image="figs/murillo/far_divergence_tree.png" data-background-position="top 200px right 50px" data-background-size=30%}
-
-::: {.columns}
-:::::: {.column width=70%}
-
-> - Genetic diversity ($\pi$) and divergence ($d_{XY}$) are
->     *time since common ancestor*
->     multiplied by *effective mutation rate*:
->     $$ \pi, d_{XY} = T_\text{MRCA} \times \mu_\text{effective} . $$
-> - Higher mutation rate $\Rightarrow$ higher $\pi$
->     and faster increase of $d_{XY}$.
-> - Positive selection *increases* fixation rate of new mutations
->     $\Rightarrow$ $d_{XY}$ goes up faster,
-> - ... but, it *decreases* $\pi$ nearby.
-
-:::
-::::::
-
---------------
-
-**linked selection:** The indirect effects of selection on genomic locations
-  that are *linked* to the sites under selection by a lack of recombination.
-
-Selection tends to *decrease* diversity,
-  over a distance determined by recombination rate.
-
-::: {.centered}
-
-![](figs/sweep_haps.png){.fragment width="40%"}
-![](figs/background_haps.png){.fragment width="40%"}
-
-:::
-
-<!--
-----------------------
-![Langley et al 2012](figs/from_the_literature/langley-et-al-2012-chr3-pi-and-rho.png)
--->
-
-
-## Diversity correlates with recombination rate
-
-:::: {.columns}
-:::::::: {.column width=80%}
-
-
-![Corbett-Detig et al](figs/from_the_literature/corbett-detig-divergence-recomb-all-species.png){width=85%}
-
-::::
-:::::::: {.column width=20%}
-
-
-*Hudson 1994; Cutter & Payseur 2013; Corbett-Detig et al 2015*
-
-::::
-::::::::
-
-
-<!-- Divergence landscapes changing over time (from Murillo) -->
-
-## How diversity landscapes change
-
-:::: {.columns}
-:::::::: {.column width=50%}
-
-![](figs/murillo/close_divergence_tree.png)
-
-::::
-:::::::: {.column width=50%}
-
-![](figs/murillo/two_spp_neutral_div_landscapes_0N.jpg)
-
-::::
-::::::::
-
-## How diversity landscapes change
-
-:::: {.columns}
-:::::::: {.column width=50%}
-
-
-::::
-:::::::: {.column width=50%}
-
-![](figs/murillo/two_spp_neutral_div_landscapes.gif)
-
-::::
-::::::::
-
-## How diversity landscapes change
-
-:::: {.columns}
-:::::::: {.column width=50%}
-
-![](figs/murillo/far_divergence_tree.png)
-
-::::
-:::::::: {.column width=50%}
-
-![](figs/murillo/two_spp_neutral_div_landscapes_4N.jpg)
-
-::::
-::::::::
-
-## How can landscapes stay correlated?
-
-:::: {.columns}
-:::::::: {.column width=50%}
-
-- shared processes:
-    * positive, negative selection
-    * mutation rate variation
-    * GC-biased gene conversion
-
-::::
-:::::::: {.column width=50%}
-
-![](figs/murillo/two_spp_sel_div_landscapes_0N.jpg)
-
-::::
-::::::::
-
-## How can landscapes stay correlated?
-
-:::: {.columns}
-:::::::: {.column width=50%}
-
-- shared processes:
-    * positive, negative selection
-    * mutation rate variation
-    * GC-biased gene conversion
-
-::::
-:::::::: {.column width=50%}
-
-![](figs/murillo/two_spp_sel_div_landscapes.gif)
-
-::::
-::::::::
-
-## How can landscapes stay correlated?
-
-:::: {.columns}
-:::::::: {.column width=50%}
-
-- shared processes:
-    * positive, negative selection
-    * mutation rate variation
-    * GC-biased gene conversion
-
-::::
-:::::::: {.column width=50%}
-
-![](figs/murillo/two_spp_sel_div_landscapes_4N.jpg)
-
-::::
-::::::::
-
-<!-- End divergence landscapes changing over time -->
-
