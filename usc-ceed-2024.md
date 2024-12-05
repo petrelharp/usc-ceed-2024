@@ -1,7 +1,7 @@
 ---
 title: "Simulation-based inference for ecology and evolution"
 author: "Peter Ralph <br/> University of Oregon <br/> Dept of Data Science"
-date: "Quantitative and Computational Biology Seminar<br/> University of Southern California // 4 December 2024"
+date: "Center for Ecological and Evolutionary Dynamics Seminar<br/> University of Southern California // 4 December 2024"
 ---
 
 --------------------
